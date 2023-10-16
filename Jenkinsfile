@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Perform the build steps, e.g., compile your code.
-                sh " echo 'this is the build phase'"
+                sh " docker ps"
             }
         }
 
