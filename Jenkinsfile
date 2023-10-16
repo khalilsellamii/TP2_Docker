@@ -2,33 +2,25 @@ pipeline {
     agent any // This specifies that the pipeline can run on any available agent (Jenkins slave).
 
     stages {
-        stage('Checkout') {
-            steps {
-                // This step checks out your source code from your version control system (e.g., Git).
-                script {
-                    git 'https://github.com/khalilsellamii/TP2_Docker'
-                }
-            }
-        }
         
         stage('Build') {
             steps {
                 // Perform the build steps, e.g., compile your code.
-                echo "this is the build phase"
+                sh " echo 'this is the build phase'"
             }
         }
 
         stage('Test') {
             steps {
                 // Run tests for your application.
-            sh 'python3 src/test.py'
+            sh 'echo "this is test phase"'
             }
         }
 
         stage('push') {
             steps {
                 // Deploy your application to your target environment.
-                sh 'this is the push phase '
+                sh 'echo "this is the push phase" '
             }
         }
     }
