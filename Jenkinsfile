@@ -2,7 +2,7 @@ stage('Build and Push Docker Image') {
     steps {
         script {
             // Define the Docker image name and tag.
-            def dockerImage = "khalilsellamii/tp-docker:latest"
+            def dockerImage = "khalilsellamii/tp2-docker:latest"
             
             // Build the Docker image from the Dockerfile.
             sh "docker build -t $dockerImage ."
