@@ -1,16 +1,7 @@
 pipeline {
     agent any // This specifies that the pipeline can run on any available agent (Jenkins slave).
 
-    stages {
-        stage('Checkout') {
-            steps {
-                // This step checks out your source code from your version control system (e.g., Git).
-                script {
-                    git 'https://github.com/khalilsellamii/TP2_Docker/'
-                }
-            }
-        }
-        
+    stages {        
         stage('Build') {
             steps {
                 // Perform the build steps, e.g., compile your code.
